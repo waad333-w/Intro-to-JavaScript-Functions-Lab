@@ -31,13 +31,11 @@ Complete the exercise in the space below:
 
 function isAdult(age) {
   if (age >= 18) {
-    return 'Adult';
+    return "Adult";
   } else {
-    return 'Minor';
+    return "Minor";
   }
 }
-
-
 
 console.log('Exercise 2 Result:', isAdult(21));
 
@@ -55,8 +53,16 @@ Complete the exercise in the space below:
 */
 
 function isCharAVowel(char) {
-  const vowels = ['a', 'e', 'i', 'o', 'u'];
-  return vowels.includes(char.toLowerCase());
+  if (
+    char === 'a' ||
+    char === 'e' ||
+    char === 'i' ||
+    char === 'o' ||
+    char === 'u'
+  ) { return true; }
+  else { return false; }
+
+
 }
 
 console.log('Exercise 3 Result:', isCharAVowel("a"));
@@ -74,8 +80,9 @@ Complete the exercise in the space below:
 */
 
 function generateEmail(name, domain) {
-  return name + '@' + domain
+  return name + "@" + domain;
 }
+
 
 console.log('Exercise 4 Result:', generateEmail("johnsmith", "example.com"));
 
@@ -90,12 +97,13 @@ Example: greetUser('Sam', 'morning') should return "Good morning, Sam!"
 
 Complete the exercise in the space below:
 */
+
 function greetUser(name, timeOfDay) {
-  return 'Good' + '' + timeOfDay + ',' + name
+  return 'Good ' + timeOfDay + ', ' + name + '!';
 }
 
-
 console.log('Exercise 5 Result:', greetUser("Sam", "morning"));
+
 
 /*
 Exercise 6: maxOfThree()
@@ -107,17 +115,16 @@ Example: maxOfThree(17, 4, 9) should return 17.
 
 Complete the exercise in the space below:
 */
+
 function maxOfThree(num1, num2, num3) {
   if (num1 >= num2 && num1 >= num3) {
     return num1;
-  } else if (num2 >= num1 && num2 >= num3) {
-    return num2;
-  } else {
-    return num3;
   }
+  else if (num2 >= num1 && num2 >= num3) {
+    return num2;
+  }
+  else { return num3; }
 }
-
-
 
 
 console.log('Exercise 6 Result:', maxOfThree(5, 10, 8));
@@ -134,8 +141,8 @@ Example: calculateTip(50, 20) should return 10.
 Complete the exercise in the space below:
 */
 
-function calculateTip(billAmount, tipPercentage) {
-  return (billAmount * tipPercentage) / 100;
+function calculateTip(billAmount, tip) {
+  return billAmount * tip / 100;
 }
 
 
@@ -154,14 +161,16 @@ Example: convertTemperature(32, 'F') should return 0 (Celsius).
 
 Complete the exercise in the space below:
 */
+
 function convertTemperature(temp, scale) {
   if (scale === 'C') {
-    return (temp * 9 / 5) + 32;
-  } else if (scale === 'F') {
+    return temp * 9 / 5 + 32;
+  }
+  else {
     return (temp - 32) * 5 / 9;
   }
-}
 
+}
 
 console.log('Exercise 8 Result:', convertTemperature(32, "C"));
 
@@ -180,17 +189,25 @@ Example: basicCalculator(10, 5, 'subtract') should return 5.
 
 Complete the exercise in the space below:
 */
+
 function basicCalculator(num1, num2, operation) {
   if (operation === 'add') {
     return num1 + num2;
-  } else if (operation === 'subtract') {
+  }
+
+  else if (operation === 'subtract') {
     return num1 - num2;
-  } else if (operation === 'multiply') {
+  }
+  else if (operation === 'multiply') {
     return num1 * num2;
-  } else if (operation === 'divide') {
+  }
+  else if (operation === 'divide') {
     return num1 / num2;
   }
+
 }
 
 
 console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
+
+
